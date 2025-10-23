@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    --primary: 200 95% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 195 100% 65%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 25% 27%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 195 100% 95%;
+    --accent-foreground: 200 95% 48%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 200 95% 48%;
+
+    --medical-blue: 200 95% 48%;
+    --medical-blue-light: 195 100% 65%;
+    --medical-blue-dark: 205 85% 35%;
+    --medical-teal: 180 95% 45%;
+    --medical-green: 142 95% 45%;
+    
+    /* NHS Blue Colors */
+    --nhs-blue: 225 100% 26%;
+    --nhs-blue-hover: 225 100% 20%;
+    
+    /* NextDoc Brand Colors - Fortune 500 Grade */
+    --brand-nextdoc-uk: 215 100% 26%;
+    --brand-nextdoc-uk-hover: 215 100% 20%;
+    --brand-nextdoc-india: 15 100% 60%;
+    --brand-nextdoc-india-hover: 15 100% 50%;
+    --brand-nextdoc-pg: 174 100% 33%;
+    --brand-nextdoc-pg-hover: 174 100% 28%;
+    --brand-nextdoc-med: 338 85% 46%;
+    --brand-nextdoc-med-hover: 338 85% 38%;
+    --brand-nextdoc-care: 211 72% 59%;
+    --brand-nextdoc-care-hover: 211 72% 50%;
+    --brand-nextdoc-labs: 43 100% 62%;
+    --brand-nextdoc-labs-hover: 43 100% 52%;
+    --brand-ndg-academy: 272 64% 46%;
+    --brand-ndg-academy-hover: 272 64% 38%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--medical-blue)), hsl(var(--medical-teal)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    
+    --shadow-medical: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+    --shadow-card: 0 4px 20px -2px hsl(var(--primary) / 0.1);
+    --shadow-elevated: 0 20px 60px -10px hsl(220 13% 10% / 0.15);
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Prevent Cumulative Layout Shift */
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Ensure minimum tap target size for accessibility */
+  button, a {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Gradient text utility */
+  .text-gradient-medical {
+    @apply bg-gradient-to-r from-medical-blue to-medical-teal bg-clip-text text-transparent;
+  }
+
+  /* Circuit pattern background */
+  .bg-pattern-circuits {
+    background-image: 
+      repeating-linear-gradient(90deg, hsl(var(--medical-blue) / 0.03) 0px, transparent 1px, transparent 20px),
+      repeating-linear-gradient(0deg, hsl(var(--medical-blue) / 0.03) 0px, transparent 1px, transparent 20px);
+    background-size: 20px 20px;
+  }
+
+  /* Globe wireframe pattern */
+  .bg-pattern-globe {
+    background-image: radial-gradient(circle at 50% 50%, hsl(var(--medical-blue) / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
