@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 const XIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 );
 
@@ -36,7 +36,7 @@ const Footer = () => {
     { name: "NextDoc PG", href: "/nextdoc-pg", variant: "nextdoc-pg" },
     { name: "NextDoc Med", href: "/nextdoc-med", variant: "nextdoc-med" },
     { name: "NextDoc Care", href: "/nextdoc-care", variant: "nextdoc-care" },
-    { name: "NextDoc Labs", href: "/nextdoc-labs", variant: "nextdoc-labs" },
+    { name: "NextDoc Labs", href: "http://www.nextdocglobal.io", external: true, variant: "nextdoc-labs" },
     { name: "NDG Academy", href: "/academy", variant: "ndg-academy" }
   ];
 
@@ -62,8 +62,8 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Badge 
-                      variant="outline" 
+                    <Badge
+                      variant="outline"
                       className="px-4 py-2 text-sm border-white/50 text-white hover:bg-white/10 transition-all duration-200 cursor-pointer"
                     >
                       {link.name}
@@ -71,8 +71,8 @@ const Footer = () => {
                   </a>
                 ) : (
                   <Link to={link.href}>
-                    <Badge 
-                      variant="outline" 
+                    <Badge
+                      variant="outline"
                       className="px-4 py-2 text-sm border-white/50 text-white hover:bg-white/10 transition-all duration-200 cursor-pointer"
                     >
                       {link.name}
@@ -93,8 +93,8 @@ const Footer = () => {
               <ul className="space-y-2">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
-                    <Link 
-                      to={link.href} 
+                    <Link
+                      to={link.href}
                       className="text-sm text-gray-100 hover:text-white transition-colors duration-200"
                     >
                       {link.name}
@@ -108,8 +108,8 @@ const Footer = () => {
               <ul className="space-y-2">
                 {legalLinks.map((link, index) => (
                   <li key={index}>
-                    <Link 
-                      to={link.href} 
+                    <Link
+                      to={link.href}
                       className="text-sm text-gray-100 hover:text-white transition-colors duration-200"
                     >
                       {link.name}
@@ -123,17 +123,17 @@ const Footer = () => {
           {/* Column 2: Compliance */}
           <div className="space-y-4">
             <h3 className="text-sm font-semibold tracking-wider uppercase">Compliance</h3>
-            
+
             {/* Policy Notice */}
             <p className="text-xs text-gray-100 italic leading-relaxed pb-2 border-b border-white/10">
               Group-level policies shown below. Individual products maintain separate policies.
             </p>
-            
+
             <ul className="space-y-2">
               {complianceLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    to={link.href} 
+                  <Link
+                    to={link.href}
                     className="text-sm text-gray-100 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
@@ -157,8 +157,8 @@ const Footer = () => {
                     <p className="text-sm text-gray-100">Wimbledon, London SW19 8ND</p>
                   </div>
                 </div>
-                <a 
-                  href="mailto:info@nextdocglobal.com" 
+                <a
+                  href="mailto:info@nextdocglobal.com"
                   className="flex items-center gap-3 text-gray-100 hover:text-white transition-colors duration-200 ml-8"
                 >
                   <Mail className="w-5 h-5 text-blue-300 flex-shrink-0" />
@@ -175,8 +175,8 @@ const Footer = () => {
                     <p className="text-sm text-gray-100">Operated by Royash Infra Services Pvt Ltd</p>
                   </div>
                 </div>
-                <a 
-                  href="mailto:operations@royashinfraservices.com" 
+                <a
+                  href="mailto:operations@royashinfraservices.com"
                   className="flex items-center gap-3 text-gray-100 hover:text-white transition-colors duration-200 ml-8"
                 >
                   <Mail className="w-5 h-5 text-blue-300 flex-shrink-0" />

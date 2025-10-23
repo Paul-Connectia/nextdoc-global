@@ -4,13 +4,13 @@ import heroImage from "@/assets/hero-medical-team.jpg";
 
 const HeroSection = () => {
   const navigate = useNavigate();
-  
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
+        <img
+          src={heroImage}
           alt="Diverse medical team representing NextDoc Global's mission"
           className="w-full h-full object-cover"
           width="1920"
@@ -38,45 +38,47 @@ const HeroSection = () => {
               AI-Powered.
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Practical, governance-first AI that helps doctors plan, qualify, and progress.
           </p>
-          
-          {/* Primary CTAs with sublabels */}
-        <div className="pt-12 space-y-8">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
-            <a href="https://www.nextdocuk.com" target="_blank" rel="noopener" className="w-full sm:w-auto">
-              <Button variant="nextdoc-uk" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl">
-                Enter NextDoc UK
-              </Button>
-            </a>
-            <Button variant="nextdoc-india" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl" onClick={() => navigate('/nextdoc-india')}>
-              NextDoc India
-            </Button>
-            <Button variant="ndg-academy" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl" onClick={() => navigate('/academy')}>
-              NDG Academy
-            </Button>
-            <Button variant="nextdoc-labs" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl" onClick={() => navigate('/nextdoc-labs')}>
-              NextDoc Labs
-            </Button>
-          </div>
 
-          <div className="pt-8">
-            <p className="text-xs uppercase tracking-wider text-blue-200/70 text-center mb-4 font-semibold">India Divisions</p>
-            <div className="flex flex-wrap gap-2 justify-center max-w-3xl mx-auto">
-              <Button variant="nextdoc-pg" size="sm" className="text-sm opacity-90 hover:opacity-100" onClick={() => navigate('/nextdoc-pg')}>
-                NextDoc PG
+          {/* Primary CTAs with sublabels */}
+          <div className="pt-12 space-y-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
+              <a href="https://www.nextdocuk.com" target="_blank" rel="noopener" className="w-full sm:w-auto">
+                <Button variant="nextdoc-uk" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl">
+                  Enter NextDoc UK
+                </Button>
+              </a>
+              <Button variant="nextdoc-india" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl" onClick={() => navigate('/nextdoc-india')}>
+                NextDoc India
               </Button>
-              <Button variant="nextdoc-med" size="sm" className="text-sm opacity-90 hover:opacity-100" onClick={() => navigate('/nextdoc-med')}>
-                NextDoc Med
+              <Button variant="ndg-academy" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl" onClick={() => navigate('/academy')}>
+                NDG Academy
               </Button>
-              <Button variant="nextdoc-care" size="sm" className="text-sm opacity-90 hover:opacity-100" onClick={() => navigate('/nextdoc-care')}>
-                NextDoc Care
-              </Button>
+              <a href="https://www.nextdocglobal.io" target="_blank" rel="noopener" className="w-full sm:w-auto">
+                <Button variant="nextdoc-labs" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl">
+                  NextDoc Labs
+                </Button>
+              </a>
+            </div>
+
+            <div className="pt-8">
+              <p className="text-xs uppercase tracking-wider text-blue-200/70 text-center mb-4 font-semibold">India Divisions</p>
+              <div className="flex flex-wrap gap-2 justify-center max-w-3xl mx-auto">
+                <Button variant="nextdoc-pg" size="sm" className="text-sm opacity-90 hover:opacity-100" onClick={() => navigate('/nextdoc-pg')}>
+                  NextDoc PG
+                </Button>
+                <Button variant="nextdoc-med" size="sm" className="text-sm opacity-90 hover:opacity-100" onClick={() => navigate('/nextdoc-med')}>
+                  NextDoc Med
+                </Button>
+                <Button variant="nextdoc-care" size="sm" className="text-sm opacity-90 hover:opacity-100" onClick={() => navigate('/nextdoc-care')}>
+                  NextDoc Care
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
 
