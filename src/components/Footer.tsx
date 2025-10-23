@@ -42,8 +42,8 @@ const Footer = () => {
 
   const socialLinks = [
     { name: "LinkedIn", href: "#", icon: Linkedin, label: "Follow us on LinkedIn" },
-    { name: "X", href: "#", icon: XIcon, label: "Follow us on X" },
-    { name: "YouTube", href: "#", icon: Youtube, label: "Subscribe to our YouTube channel" },
+    { name: "X", href: "https://x.com/nextdocglobal", icon: XIcon, label: "Follow us on X" },
+    { name: "YouTube", href: "https://www.youtube.com/channel/UCAu4y02joi0e9WD6pLZSvcA", icon: Youtube, label: "Subscribe to our YouTube channel" },
     { name: "Instagram", href: "#", icon: Instagram, label: "Follow us on Instagram" },
   ];
 
