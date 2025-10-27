@@ -1,4 +1,4 @@
-import logoImage from "@/assets/logo/NGD_logo-white.jpg";
+import logoImage from "@/assets/logo/logo.jpg";
 
 const GlobalPresenceSection = () => {
 
@@ -6,22 +6,22 @@ const GlobalPresenceSection = () => {
     <section className="py-20 md:py-28 bg-gradient-to-br from-medical-blue/5 via-background to-medical-teal/5 relative overflow-hidden">
       {/* Subtle circuit pattern background */}
       <div className="absolute inset-0 bg-pattern-circuits opacity-30"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
         <div className="max-w-6xl mx-auto text-center space-y-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             One Ecosystem. <span className="text-gradient-medical">Infinite Medical Journeys.</span>
           </h2>
-          
+
           {/* Custom SVG Infographic */}
           <div className="relative py-12">
-            <svg 
-              viewBox="0 0 800 500" 
+            <svg
+              viewBox="0 0 800 500"
               className="w-full max-w-4xl mx-auto"
               aria-labelledby="global-network-title"
             >
               <title id="global-network-title">NextDoc Global Network connecting India, Education, and UK</title>
-              
+
               {/* Connection Lines with Animation */}
               <g className="connection-lines">
                 <line x1="200" y1="250" x2="400" y2="180" stroke="url(#gradient1)" strokeWidth="3" strokeDasharray="5,5" className="animate-pulse-slow" />
@@ -49,12 +49,12 @@ const GlobalPresenceSection = () => {
               <g className="animate-float">
                 <circle cx="400" cy="180" r="45" fill="url(#gradient1)" opacity="0.1" />
                 <circle cx="400" cy="180" r="40" fill="white" stroke="url(#gradient1)" strokeWidth="3" />
-                <image 
-                  href={logoImage} 
-                  x="360" 
-                  y="140" 
-                  width="80" 
-                  height="80" 
+                <image
+                  href={logoImage}
+                  x="360"
+                  y="140"
+                  width="80"
+                  height="80"
                   className="opacity-90"
                 />
               </g>
