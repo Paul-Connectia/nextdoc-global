@@ -39,30 +39,30 @@ const CookieConsent = () => {
             </p>
           </div>
           <div className="flex gap-2 flex-wrap">
-            <Button 
-              variant="default" 
-              size="default" 
+            <Button
+              variant="default"
+              size="default"
               onClick={handleAccept}
               className="flex-1 min-w-[100px]"
             >
               Accept All
             </Button>
-            <Button 
-              variant="outline" 
-              size="default" 
+            <Button
+              variant="outline"
+              size="default"
               onClick={handleReject}
               className="flex-1 min-w-[100px]"
             >
               Reject
             </Button>
-            <Button 
+            {/* <Button 
               variant="ghost" 
               size="default" 
               onClick={handleManage}
               className="w-full"
             >
               Manage Preferences
-            </Button>
+            </Button> */}
           </div>
         </CardContent>
       </Card>
